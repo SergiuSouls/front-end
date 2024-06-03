@@ -1,0 +1,43 @@
+<!--
+
+   Task: implement function findDuplicates so it returns array containce duplicates of initial array.
+
+-->
+
+<html>
+<head>
+    <title>JavaScript</title>
+    <script type="text/javascript">
+        function findDuplicates(arr) {
+            let frequency = {};
+            let duplicates = [];
+            
+          
+            for (let i = 0; i < arr.length; i++) {
+                if (frequency[arr[i]]) {
+                    frequency[arr[i]] += 1;
+                } else {
+                    frequency[arr[i]] = 1;
+                }
+            }
+            
+            
+            for (let key in frequency) {
+                if (frequency[key] > 1) {
+                    duplicates.push(Number(key));
+                }
+            }
+            
+            return duplicates;
+        }
+
+        var initialArr = [1, 2, 3, 1, 5, 3, 4, 1];
+        var duplicates = findDuplicates(initialArr);
+
+        console.log("Initial array: " + initialArr);
+        console.log("Duplicate elements: " + duplicates);
+    </script>
+</head>
+<body>
+</body>
+</html>
