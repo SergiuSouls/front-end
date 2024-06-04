@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/style.css">
+		<title>WEB development foundation. DOM</title>
+	</head>
+	<body>
+		<h1>
+			<span class="yellow">WEB development foundation.</span>			
+		</h1>
+		<h3><span class="blue">Browser environment. Work with DOM.</span></h3>
+
+		<div class="lesson">
+			<div class="lesson__text"><span>Text</span></div>
+		</div>
+		<div data-say-hi="Greeting gentleman">Hi</div> 
+		<ul> 
+			<li>Korchi</li> 
+			<li>Yanchi</li> 
+		   </ul> 
+<div class="like"></div> 
+<div class="subscribe"></div> 
+<div class="like subscribe"></div> 
+		<script>
+			let liul = document.getElementsByName('Yanchi')
+			const element = document.querySelector('div[data-say-hi]');
+			let like = document.getElementsByClassName('like')
+if (element) {
+
+  const greeting = element.dataset.sayHi;
+
+  console.log(greeting);
+} else {
+  console.error('Element with data-say-hi attribute not found');
+}
+console.log(liul);
+console.log(like);
+		</script>
+	</body>
+</html>
